@@ -19,6 +19,11 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
         <a class="navbar-brand mx-auto" href="#">Andrea Fratini</a>
+        <!--    -->
+        <div class="d-flex align-items-center ms-auto">
+            <img src="images/IMG-20240810-WA0010.jpg" alt="Profile Photo" class="navbar-photo" onclick="openModal()">
+        </div>
+        <!-- -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -27,12 +32,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#home">Home</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="#projects">About Me</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#publications">Research</a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a class="nav-link" href="CV.html">Short CV</a>
                 </li>
@@ -40,6 +45,22 @@
         </div>
     </div>
 </nav>
+
+<!-- Modal for expanded photo -->
+<div id="photoModal" class="modal fade" tabindex="-1" aria-labelledby="photoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="photoModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="images/IMG-20240810-WA0010.jpg" alt="Profile Photo" class="modal-photo">
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <!-- Home Section -->
 <section id="home" class="py-5">
@@ -54,8 +75,10 @@
     <div class="container">
         <h2>Projects and past works</h2>
         <ul class="list">
-            <li>globalSolve: An R library to solve economic models by global methods</li>
-            <li>Master's thesis: "Endogenous Regime-Switching representation of Ambiguity Attitudes in a model of Sudden Stops"</li>    
+            <li style="font-size:20px">globalSolve: An R library to solve economic models by global methods</li>
+            <!-- <li style="font-size:20px"><a href="LINKREPOSITORY" target="_blank" rel="noopener noreferrer">globalSolve: An R library to solve economic models by global methods</a></li> -->
+            <li style="font-size:20px">Master's thesis: "Endogenous Regime-Switching representation of Ambiguity Attitudes in a model of Sudden Stops"</li> 
+            <!-- <li style="font-size:20px">Master's thesis: <a href="LINKDRIVETESI" target="_blank" rel="noopener noreferrer">"Endogenous Regime-Switching representation of Ambiguity Attitudes in a model of Sudden Stops"</a></li> -->   
         </ul>
     </div>
 </section>
@@ -77,14 +100,14 @@
 <!-- Contact Section -->
 <section id="contact" class="py-5">
     <div class="container">
-        <h2>Contact Me</h2>
-        <p>Feel free to reach out via email: <a href="mailto:fratini.1910138@studenti.uniroma1.it">fratini.1910138@studenti.uniroma1.it</a></p>
+        <h5>Contact Me</h5>
+        <p><br>Feel free to reach out via email! <a href="mailto:fratini.1910138@studenti.uniroma1.it">fratini.1910138@studenti.uniroma1.it</a></p>
         <p>GitHub: <a href="https://github.com/andrea-fratini" target="_blank" rel="noopener noreferrer">andrea-fratini</a></p>
     </div>
 </section>
 
 <footer class="text-center py-3 bg-dark text-white">
-    <p>© 2024 Your Name | GitHub: <a href="https://github.com/yourusername" class="text-white">yourusername</a></p>
+    <p>© 2024 Your Name | GitHub: <a href="https://github.com/andrea-fratini" class="text-white">andrea-fratini</a></p>
 </footer>
 
 <!-- Bootstrap JS and Popper.js (required for mobile navigation) -->
@@ -99,5 +122,20 @@
         });
     });
 </script>
+
+<script>
+    function openModal() {
+        var myModal = new bootstrap.Modal(document.getElementById('photoModal'), {
+            keyboard: true
+        });
+        myModal.show();
+    }
+
+    function closeModal() {
+        var myModal = bootstrap.Modal.getInstance(document.getElementById('photoModal'));
+        myModal.hide();
+    }
+</script>
+
 </body>
 </html>

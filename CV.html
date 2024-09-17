@@ -3,94 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Curriculum Vitae of Andrea Fratini, PhD student specializing in [Your Research Area].">
-    <title>CV - Andrea Fratini</title>
+    <meta name="description" content="Andrea Fratini | Curriculum Vitae">
+    <title>Andrea Fratini | Curriculum Vitae</title>
+
+    <!-- Google Fonts and Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body class="fade-in">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container d-flex justify-content-center">
-            <a class="navbar-brand" href="#">Andrea Fratini</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="research.html">Research</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="cv.html">CV</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand mx-auto" href="#">Andrea Fratini</a>
+        <div class="d-flex align-items-center ms-auto">
+            <img src="images/IMG-20240810-WA0010.jpg" alt="Profile Photo" class="navbar-photo"  onclick="openModal()">
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="#projects">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#publications">Research</a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="CV.html">Short CV</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Modal for expanded photo -->
+<div id="photoModal" class="modal fade" tabindex="-1" aria-labelledby="photoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="photoModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="images/IMG-20240810-WA0010.jpg" alt="Profile Photo" class="modal-photo">
             </div>
         </div>
-    </nav>
-
-    <!-- Page Content -->
-    <div class="container mt-4">
-        <h1>Curriculum Vitae</h1>
-        <p>Here is my detailed CV. You can download it or view it online.</p>
-
-        <!-- CV Content -->
-        <section>
-            <h2>Contact Information</h2>
-            <p>Email: andrea@example.com</p>
-            <p>Phone: +123 456 7890</p>
-
-            <h2>Education</h2>
-            <ul>
-                <li>PhD in [Your Field], [University Name], [Year]</li>
-                <li>MSc in [Your Field], [University Name], [Year]</li>
-                <li>BSc in [Your Field], [University Name], [Year]</li>
-            </ul>
-
-            <h2>Experience</h2>
-            <ul>
-                <li>[Position], [Company/Institution], [Year–Year]</li>
-                <li>[Position], [Company/Institution], [Year–Year]</li>
-            </ul>
-
-            <h2>Publications</h2>
-            <ul>
-                <li>[Publication Title], [Journal/Conference], [Year]</li>
-                <li>[Publication Title], [Journal/Conference], [Year]</li>
-            </ul>
-
-            <h2>Skills</h2>
-            <ul>
-                <li>[Skill 1]</li>
-                <li>[Skill 2]</li>
-                <li>[Skill 3]</li>
-            </ul>
-
-            <h2>References</h2>
-            <p>Available upon request.</p>
-        </section>
-
-        <!-- Optional CV Download Link -->
-        <a href="cv.pdf" class="btn btn-primary mt-3" download>Download CV (PDF)</a>
     </div>
+</div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Add the 'visible' class to trigger the fade-in effect
-            var fadeInElements = document.querySelectorAll('.fade-in');
-            fadeInElements.forEach(function(element) {
-                element.classList.add('visible');
-            });
+<!-- CV Section -->
+<section id="cv" class="py-5">
+    <div class="container">
+        <p style="font-size:32px"><a href="https://github.com/andrea-fratini" target="_blank" rel="noopener noreferrer">Curriculum Vitae</a></p>
+        <!-- <h2>Curriculum Vitae</h2> -->
+        <div class="row">
+            <div class="col-md-6">
+                <h4>General Information</h4>
+                <ul>
+                    <p><strong>Full Name:</strong> Andrea Fratini <strong>Date of Birth:</strong> 9 March 2000 <strong>Place of Birth:</strong> Roma (RM), Italy</p>
+                </ul>
+
+                <h4>Education</h4>
+                <ul>
+                    <li>
+                        <strong>Humboldt-Universität zu Berlin, Berlin, DE</strong><br>
+                        Visiting M.Sc. student (March 2024 - June 2024)<br>
+                        <strong>Supervisor:</strong> Markus Rei&szlig
+                    </li>
+                    <li>
+                        <strong>Sapienza University of Rome, Rome, IT</strong><br>
+                        M.Sc. in Statistics (2022 - 2024)<br>
+                        <strong>Thesis:</strong> Endogenous switching ambiguity attitudes and Sudden Stops<br>
+                        <strong>Supervisors:</strong> Prof. Valeria Patella, Prof. Valentina Cammarota<br>
+                    </li>
+                    <li>
+                        <strong>Sapienza University of Rome, Rome, IT</strong><br>
+                        B.A. in Economics (2019 - 2022)<br>
+                        <strong>Thesis:</strong> Risk sharing across EMU and EU centralized balance: an econometric approach<br>
+                        <strong>Supervisor:</strong> Prof. Massimiliano Tancioni<br>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="col-md-6">
+                <br><br><br><br>
+                <h4>Grants</h4>
+                <ul>
+                    <li>Visiting scholarship, Sapienza University of Rome, 2023</li>
+                    <li>Honours programme, Sapienza University of Rome, 2024</li>
+                </ul>
+
+                <h4>Seminars and Conferences</h4>
+                <ul>
+                    <li>HU Working Group Seminar, Mathematical Statistics, Berlin, DE (March & May, 2024)</li>
+                </ul>
+            </div>    
+        </div>
+    </div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-5">
+    <div class="container">
+        <h5>Contact Me</h5>
+        <p><br>Feel free to reach out via email! <a href="mailto:fratini.1910138@studenti.uniroma1.it">fratini.1910138@studenti.uniroma1.it</a></p>
+        <p>GitHub: <a href="https://github.com/andrea-fratini" target="_blank" rel="noopener noreferrer">andrea-fratini</a></p>
+    </div>
+</section>
+
+<footer class="text-center py-3 bg-dark text-white">
+    <p>© 2024 Your Name | GitHub: <a href="https://github.com/andrea-fratini" class="text-white">andrea-fratini</a></p>
+</footer>
+
+<!-- Bootstrap JS and Popper.js (required for mobile navigation) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Add the 'visible' class to trigger the fade-in effect
+        var fadeInElements = document.querySelectorAll('.fade-in');
+        fadeInElements.forEach(function(element) {
+            element.classList.add('visible');
         });
-    </script>
+    });
+</script>
+
+<script>
+    function openModal() {
+        var myModal = new bootstrap.Modal(document.getElementById('photoModal'), {
+            keyboard: true
+        });
+        myModal.show();
+    }
+
+    function closeModal() {
+        var myModal = bootstrap.Modal.getInstance(document.getElementById('photoModal'));
+        myModal.hide();
+    }
+</script>
+
 </body>
 </html>
