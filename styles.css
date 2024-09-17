@@ -1,0 +1,29 @@
+/* Custom Navbar Styling */
+.navbar {
+    height: 80px;
+    background-color: #eeb422  !important; /* Custom blue background color */
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px; /* Increase the font size of menu items */
+    /*font-weight: bold; /* Make the menu items bold */
+    color: #003736; /* Set text color */
+}
+
+.navbar-brand {
+    font-family: 'Oswald', sans-serif;
+    font-size: 35px; /* Increase brand text size */
+    /*padding-left: 4 !important;  /* Adjust padding if necessary */
+    color: #003736; /* Set text color */
+}
+
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out; /* Longer duration and smooth easing function */
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
