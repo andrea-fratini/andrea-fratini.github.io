@@ -24,7 +24,7 @@
             <img src="images/IMG-20240810-WA0010.jpg" alt="Profile Photo" class="navbar-photo" onclick="openModal()">
         </div>
         <!-- -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -136,9 +136,7 @@
             element.classList.add('visible');
         });
     });
-</script>
 
-<script>
     function openModal() {
         var myModal = new bootstrap.Modal(document.getElementById('photoModal'), {
             keyboard: true
@@ -150,7 +148,26 @@
         var myModal = bootstrap.Modal.getInstance(document.getElementById('photoModal'));
         myModal.hide();
     }
-</script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.querySelector('#navbarNav');
+
+        navbarToggler.addEventListener('click', function() {
+            // Toggle the 'menu-opened' class on the body
+            document.body.classList.toggle('menu-opened');
+        });
+
+        // When the menu closes, remove the background
+        navbarCollapse.addEventListener('hidden.bs.collapse', function() {
+            document.body.classList.remove('menu-opened');
+        });
+
+        // When the menu opens, add the background
+        navbarCollapse.addEventListener('shown.bs.collapse', function() {
+            document.body.classList.add('menu-opened');
+        });
+    });</script>
 
 </body>
 </html>

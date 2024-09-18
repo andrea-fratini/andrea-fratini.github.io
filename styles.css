@@ -37,7 +37,7 @@ nav li {
 
 .nav-icon {
     text-decoration: none;
-    color: #333; /* Default color */
+    color: #003736; /* Default color */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,8 +50,63 @@ nav li {
   }
   
   .nav-icon:hover svg {
-    color: #333; /* Change color on hover (optional) */
+    color: #003736; /* Change color on hover (optional) */
   }
+
+body.menu-opened {
+    background-color: white !important;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-nav .nav-link {
+    color: #003736 !important;
+}
+
+.navbar-collapse {
+    background-color:#eeb422; /* Dark background for the navbar when it collapses */
+}
+
+/* da cancellare*/
+
+.navbar-nav .nav-item {
+    margin-top: 15px;  /* Adjust this value to increase spacing */
+    margin-bottom: 15px; /* Adjust this value to increase spacing */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 10;
+    margin: 20;
+    display: flex;
+    align-items: center;
+  }
+  
+nav li {
+    margin-top: 20px;  /* Adjust this value to increase spacing */
+    margin-bottom: 20px; /* Adjust this value to increase spacing */
+}
+
+.nav-icon {
+    text-decoration: none;
+    color: #003736; /* Default color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.nav-icon svg {
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+    transition: color 0.3s ease;
+  }
+  
+  .nav-icon:hover svg {
+    color: #003736; /* Change color on hover (optional) */
+  }
+
+
+/* da cancellare */
+
 
 .fade-in {
     opacity: 0;
@@ -129,6 +184,8 @@ nav li {
     color: white; /* Make the close icon white */
     padding: 10px; /* Add padding for a larger click area */
     margin: 20px; /* Increase the margin to move it away from the edge */
+    z-index: 1050;
+    position: relative;
     font-size: 30px; /* Increase font size for the 'X' */
 }
 
