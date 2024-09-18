@@ -22,6 +22,10 @@
     color: #003736; /* Set text color */
 }
 
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23003736' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
 nav ul {
     list-style-type: none;
     padding: 10;
@@ -183,10 +187,22 @@ nav li {
     border-radius: 50%; /* Make the button circular */
     color: white; /* Make the close icon white */
     padding: 10px; /* Add padding for a larger click area */
-    margin: 20px; /* Increase the margin to move it away from the edge */
+    /* margin: 20px;  Increase the margin to move it away from the edge */
     z-index: 1050;
-    position: relative;
+    position: absolute;
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
     font-size: 30px; /* Increase font size for the 'X' */
+}
+
+@media (max-width: 576px) {
+    .modal-header .btn-close {
+        width: 50px; /* Larger size for smaller screens */
+        height: 50px;
+        top: 10px; /* Position it further from the top */
+        right: 10px; /* Position it further from the right */
+        padding: 15px;
+    }
 }
 
 /* Adjust modal header to position close button better */
