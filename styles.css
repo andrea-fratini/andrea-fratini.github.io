@@ -1,8 +1,17 @@
 /* Custom Navbar Styling */
 .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* new
+    
+    
+    new*/
+    width: 100%;
     height: 90px;
     background-color: #eeb422  !important; /* Custom blue background color */
 }
+
 
 .navbar-nav .nav-link {
     font-size: 25px; /* Increase the font size of menu items */
@@ -11,66 +20,37 @@
 }
 
 .navbar-nav .nav-item {
-    margin-left: 15px;  /* Adjust this value to increase spacing */
-    margin-right: 15px; /* Adjust this value to increase spacing */
-}
+    margin-left: 15px;  
+    margin-right: 15px; 
+} 
+
+/* new .navbar-nav .nav-item {
+    margin: 15px; /* Adjust margin for spacing */
+/*}*/
 
 .navbar-brand {
     font-family: 'Oswald', sans-serif;
-    font-size: 45px; /* Increase brand text size */
+    font-size: clamp(20px, 9vw, 45px); /* Increase brand text size */
     /*padding-left: 4 !important;  /* Adjust padding if necessary */
     color: #003736; /* Set text color */
 }
 
 .navbar-dark .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23003736' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 10;
-    margin: 20;
-    display: flex;
-    align-items: center;
-  }
-  
-nav li {
-    margin-left: 20px;  /* Adjust this value to increase spacing */
-    margin-right: 20px; /* Adjust this value to increase spacing */
+.navbar-dark .navbar-toggler {
+    border-color: transparent; /* Example: Red border */
+    outline-color: transparent; /* Example: Green outline */
+    box-shadow: none; /* Remove any additional shadows */
+    background-color: none; /* transparent??*/
 }
 
-.nav-icon {
-    text-decoration: none;
-    color: #003736; /* Default color */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-.nav-icon svg {
-    width: 30px; /* Adjust size as needed */
-    height: 30px; /* Adjust size as needed */
-    transition: color 0.3s ease;
-  }
-  
-  .nav-icon:hover svg {
-    color: #003736; /* Change color on hover (optional) */
-  }
-
-body.menu-opened {
-    background-color: white !important;
-    transition: background-color 0.3s ease;
-}
-
-.navbar-nav .nav-link {
-    color: #003736 !important;
-}
 
 .navbar-collapse {
-    background-color:#eeb422; /* Dark background for the navbar when it collapses */
+    background-color: #eeb422; /* Dark background for the navbar when it collapses */
 }
-
-/* da cancellare*/
 
 .navbar-nav .nav-item {
     margin-top: 15px;  /* Adjust this value to increase spacing */
@@ -86,31 +66,48 @@ nav ul {
   }
   
 nav li {
+    margin-left: 20px;
+    margin-right: 20px;
+} 
+
+nav li {
     margin-top: 20px;  /* Adjust this value to increase spacing */
     margin-bottom: 20px; /* Adjust this value to increase spacing */
 }
+
 
 .nav-icon {
     text-decoration: none;
     color: #003736; /* Default color */
     display: flex;
     align-items: center;
+    transition: box-shadow 0.2s ease-in-out;
     justify-content: center;
   }
+
+/* width: clamp(20px, 8vw, 45px);
+    height: auto; */ 
 
 .nav-icon svg {
     width: 30px; /* Adjust size as needed */
     height: 30px; /* Adjust size as needed */
-    transition: color 0.3s ease;
+    transition: box-shadow 0.3s ease-in-out;
+    /* transition: color 0.3s ease; */
+    
   }
   
-  .nav-icon:hover svg {
-    color: #003736; /* Change color on hover (optional) */
-  }
+.nav-icon:hover svg {
+color: #003736; /* Change color on hover (optional) */
+}
 
+/* scomparso */
 
-/* da cancellare */
+body.menu-opened {
+    background-color: white !important;
+    transition: background-color 0.3s ease;
+}
 
+/* scomparso */
 
 .fade-in {
     opacity: 0;
@@ -125,12 +122,21 @@ nav li {
 .navbar-photo {
     width: 70px; /* Set width of the image */
     height: 70px; /* Set height of the image */
+    max-width: 100%;
+    height: auto;
     border-radius: 50%; /* Make the image circular */
     border: 3px solid black; /* Add a black border */
     object-fit: cover; /* Ensure the image covers the circle */
     margin-left: 15px; /* Space between the title and the photo */
     cursor: pointer; /* Indicate that the image is clickable */
 }
+
+@media (max-width: 767px) {
+    .navbar-photo {
+      width: clamp(30px, 15vw, 60px); /* 8% of viewport width */
+      height: auto; /* Maintains aspect ratio */
+    }
+  }
 
 /* Style for the modal photo */
 .modal-photo {
@@ -141,24 +147,16 @@ nav li {
     cursor: pointer; /* Indicate that the image is clickable */
 }
 
-/* Ensure the modal covers the entire screen */
 .modal-dialog.modal-fullscreen {
     max-width: 100%;
     height: 100%;
     margin: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.modal-content {
-    height: 100%;
-    border: none; /* Remove border */
-}
-
-.modal-backdrop {
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-}
-
-
-/* Style for the modal itself */
 .modal-content {
     background-color: transparent; /* Transparent background for the modal content */
     border: none; /* Remove border */
@@ -170,14 +168,14 @@ nav li {
 }
 
 
-.modal-dialog.modal-fullscreen {
-    max-width: 100%;
-    height: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.8); 
 }
+
+
+
+
+
 
 /* Style the close button */
 .modal-header .btn-close {
@@ -185,11 +183,11 @@ nav li {
     height: 60px; /* Make it larger */
     background-color: none; /* Change background color to black */
     border-radius: 50%; /* Make the button circular */
-    color: white; /* Make the close icon white */
+    color: #eeb422 !important; /* Make the close icon white */
     padding: 10px; /* Add padding for a larger click area */
     /* margin: 20px;  Increase the margin to move it away from the edge */
     z-index: 1050;
-    position: absolute;
+    position: relative;
     top: 20px; /* Distance from the top */
     right: 20px; /* Distance from the right */
     font-size: 30px; /* Increase font size for the 'X' */
@@ -199,9 +197,14 @@ nav li {
     .modal-header .btn-close {
         width: 50px; /* Larger size for smaller screens */
         height: 50px;
-        top: 10px; /* Position it further from the top */
-        right: 10px; /* Position it further from the right */
-        padding: 15px;
+        top: 5px; /* Position it further from the top */
+        right: 5px; /* Position it further from the right */
+        position: relative;
+        padding: 5px;
+        /* background-color: #eeb422;*/
+    }
+    .modal-header .btn-close::before {
+        background-color: #eeb422; /* Change the color to black (or any other) */
     }
 }
 
@@ -216,5 +219,10 @@ nav li {
 
 /* Ensure close button is visible and has no background shadow */
 .modal-header .btn-close:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* Darken the close button on hover */
+    color: #eeb422;
+    background-color: rgba(0, 0, 0, 0.5); /* Darken the close button on hover */
+}
+
+.modal-header .btn-close::before {
+    background-color: #eeb422; /* Change the color to black (or any other) */
 }

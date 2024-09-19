@@ -16,47 +16,52 @@
 
 <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand mx-auto" href="#">Andrea Fratini</a>
-        <div class="d-flex align-items-center ms-auto">
-            <img src="images/IMG-20240810-WA0010.jpg" alt="Profile Photo" class="navbar-photo"  onclick="openModal()">
-        </div>
-        <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <div class="container d-flex justify-content-between align-items-center">
+      <!-- Brand Name (Andrea Fratini) -->
+        <a class="navbar-brand" href="index.html">Andrea Fratini</a>
+
+        <!-- Profile Image -->
+        <div class="d-flex align-items-center me-auto">
+            <img src="images/IMG-20240810-WA0010.jpg" alt="Profile Photo" class="navbar-photo img-fluid rounded-circle" onclick="openModal()" style="max-width: 60px; max-height: 60px; border-radius: 50%;">
+        </div> 
+
+            <!-- Hamburger Menu Button for Mobile -->
+        <button class="navbar-toggler me-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+    
+        <!-- Navbar Links (Collapsible for Mobile) -->
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <!-- <li class="nav-item">
-                    <a class="nav-link" href="#projects">About Me</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#publications">Research</a>
-                </li> -->
-                <li class="nav-item">
-                    <a class="nav-link" href="CV.html">Short CV</a>
-                </li>
-                <li>
-                    <a href="mailto:fratini.1910138@studenti.uniroma1.it" class="nav-icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
-                        <path d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 9.671V4.697l-5.803 3.546.338.208A4.5 4.5 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671"/>
-                        <path d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791"/>
-                      </svg>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/andrea-fratini" class="nav-icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
-                      </svg>
-                    </a>
-                </li>
-            </ul>
-        </div>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="CV.html">Short CV</a>
+            </li>
+            <li class="nav-item">
+                <a href="mailto:fratini.1910138@studenti.uniroma1.it" class="nav-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
+                    <path d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 9.671V4.697l-5.803 3.546.338.208A4.5 4.5 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671"/>
+                    <path d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791"/>
+
+                    <!-- Email Icon Path -->
+                </svg>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="https://github.com/andrea-fratini" class="nav-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                    <!-- GitHub Icon Path -->
+                </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-</nav>
+  </nav>
+
 
 <!-- Modal for expanded photo -->
 <div id="photoModal" class="modal fade" tabindex="-1" aria-labelledby="photoModalLabel" aria-hidden="true">
@@ -64,7 +69,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="photoModalLabel"></h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body text-center">
                 <img src="images/IMG-20240810-WA0010.jpg" alt="Profile Photo" class="modal-photo">
@@ -76,39 +81,39 @@
 <!-- CV Section -->
 <section id="cv" class="py-5">
     <div class="container">
-        <p style="font-size:32px"><a href="https://github.com/andrea-fratini" target="_blank" rel="noopener noreferrer">Curriculum Vitae</a></p>
+        <p style="font-size:32px"><a href="https://github.com/andrea-fratini" target="_blank" rel="noopener noreferrer" style="color:#4b8178">Curriculum Vitae</a></p>
         <!-- <h2>Curriculum Vitae</h2> -->
         <div class="row">
+            <h4>General Information</h4>
+            <ul>
+                <p><strong>Full Name:</strong> Andrea Fratini <br> <strong>Place of Birth:</strong> Roma (RM), Italy</p>
+            </ul>
+
             <div class="col-md-6">
-                <h4>General Information</h4>
-                <ul>
-                    <p><strong>Full Name:</strong> Andrea Fratini <strong>Date of Birth:</strong> 9 March 2000 <strong>Place of Birth:</strong> Roma (RM), Italy</p>
-                </ul>
 
                 <h4>Education</h4>
                 <ul>
                     <li>
                         <strong>Humboldt-Universität zu Berlin, Berlin, DE</strong><br>
                         Visiting M.Sc. student (March 2024 - June 2024)<br>
-                        <strong>Supervisor:</strong> Markus Rei&szlig
+                        <i>Supervisor:</i> Markus Rei&szlig
                     </li>
                     <li>
                         <strong>Sapienza University of Rome, Rome, IT</strong><br>
                         M.Sc. in Statistics (2022 - 2024)<br>
-                        <strong>Thesis:</strong> Endogenous switching ambiguity attitudes and Sudden Stops<br>
-                        <strong>Supervisors:</strong> Prof. Valeria Patella, Prof. Valentina Cammarota<br>
+                        <i>Thesis:</i> Endogenous switching ambiguity attitudes and Sudden Stops<br>
+                        <i>Supervisors:</i> Prof. Valeria Patella, Prof. Valentina Cammarota<br>
                     </li>
                     <li>
                         <strong>Sapienza University of Rome, Rome, IT</strong><br>
                         B.A. in Economics (2019 - 2022)<br>
-                        <strong>Thesis:</strong> Risk sharing across EMU and EU centralized balance: an econometric approach<br>
-                        <strong>Supervisor:</strong> Prof. Massimiliano Tancioni<br>
+                        <i>Thesis:</i> Risk sharing across EMU and EU centralized balance: an econometric approach<br>
+                        <i>Supervisor:</i> Prof. Massimiliano Tancioni<br>
                     </li>
                 </ul>
 
             </div>
             <div class="col-md-6">
-                <br><br><br><br>
                 <h4>Grants</h4>
                 <ul>
                     <li>Visiting scholarship, Sapienza University of Rome, 2023</li>
@@ -127,8 +132,8 @@
 <section id="contact" class="py-5">
     <div class="container">
         <h5>Contact Me</h5>
-        <p><br>Feel free to reach out via email! <a href="mailto:fratini.1910138@studenti.uniroma1.it">fratini.1910138@studenti.uniroma1.it</a></p>
-        <p>GitHub: <a href="https://github.com/andrea-fratini" target="_blank" rel="noopener noreferrer">andrea-fratini</a></p>
+        <p><br>Feel free to reach out via email! <a href="mailto:fratini.1910138@studenti.uniroma1.it"  style="color:#4b8178">fratini.1910138@studenti.uniroma1.it</a></p>
+        <p>GitHub: <a href="https://github.com/andrea-fratini" target="_blank" rel="noopener noreferrer"  style="color:#4b8178">andrea-fratini</a></p>
     </div>
 </section>
 
